@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctors Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333333; /* Darker background */
+            color: #fff; /* White text */
+        }
+        form {
+            max-width: 400px;
+            margin: 50px auto; /* Center the form */
+            padding: 20px;
+            background-color: #444444; /* Darker form background */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        /* Adjust the position of help texts */
+        .form-group {
+            position: relative;
+        }
+        .form-group small {
+            position: absolute;
+            bottom: -20px; /* Adjust as needed */
+            font-size: 12px;
+            color: #888; /* Color for help text */
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px; /* Add space below the title */
+            color: gold; /* Golden color */
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            transition: background-color 0.3s ease; /* Smooth transition for background color */
+        }
+        input[type="text"]:hover,
+        input[type="email"]:hover,
+        input[type="password"]:hover {
+            background-color: gold; /* Change to golden color on hover */
+        }
+        label {
+            font-weight: bold;
+            color: gold; /* Golden color */
+            font-size: 16px; /* Larger size */
+        }
+        .submit-button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #222; /* Darker color */
+            color: gold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .submit-button:hover {
+            background-color: #111; /* Even darker color on hover */
+        }
+        .error-message {
+            color: red;
+            font-weight: bold;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .register-button {
+            width: 48%;
+            padding: 10px;
+            background-color: #222; /* Darker color */
+            color: gold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .register-button:hover {
+            background-color: #111; /* Even darker color on hover */
+        }
+        a.register-button {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <br>
+    <h2>Create Account</h2>
+    <br>
+    <p style="text-align: center;">If you are a patient, <a href="/register" style="color: goldenrod; font-weight: bold;"> SIGN UP HERE </a></p>
+    <p style="text-align: center;">If you are a doctor, Sign Up by filling out the form below</p>
+    <form method="POST" class="form-group">
+        {% csrf_token %}
+        <h2>Create your Account</h2> <!-- Title -->
+        <label for="user_type">I am a:</label>
+        <select id="user_type" name="user_type">
+            <option value="doctor">Doctor</option>
+        </select>
+        {{ doctor_form.as_p }}
+        {% if form.errors %}
+            <div class="error-message">
+                {{ form.errors }}
+            </div>
+        {% endif %}
+        <button type="submit" class="submit-button">SIGN UP</button> <!-- Submit button -->
+        <p>Already have an account? <a href="/login" style="color: goldenrod; font-weight: bold;"> LOGIN</a></p>
+    </form>
+    <script>
+        document.getElementById('user_type').addEventListener('change', function () {
+            var userType = this.value;
+            document.getElementById('doctor_form').style.display = userType === 'doctor' ? 'block' : 'none';
+        });
+    </script>
+</body>
+</html>

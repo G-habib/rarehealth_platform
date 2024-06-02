@@ -1,0 +1,167 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title> Rare Diseases Platform </title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="{% static 'js/fontawsome.js'%}" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+        <link href="{% static 'css/sec_styles.css' %}" rel="stylesheet" />
+        
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="/">RH</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#profile" style="color: #ffc914; margin-right: 40px;">{{request.user}} Profile</a></li>
+                        <li class="nav-item">
+                            <a id="logout-link" class="nav-link" href="#" style="color: #ffc914;">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- ////////////////////////////////////////////// -->
+        <br>
+        <br>
+        <section class="page-section" id="about">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Permanent Neonatal Diabetes Mellitus (PNDM)</h2>
+                    <h3 class="section-subheading text-muted">Disease Management</h3>
+                </div>
+                <ul class="timeline">
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="/static/images/image2.jpg" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Treatment</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Start rehydration and intravenous insulin infusion promptly after diagnosis. When the infant is stable and tolerating oral feedings begin subcutaneous insulin therapy. Children with pathogenic variants in ABCC8 or KCNJ11 can be treated with oral sulfonylureas; all others require long-term insulin therapy. High caloric intake is necessary for appropriate weight gain. Pancreatic enzyme replacement therapy is required for those with exocrine pancreatic insufficiency.</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="/static/images/image1.jpg" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Prevention of secondary complications</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Aggressive treatment and frequent monitoring of blood glucose concentrations to avoid acute complications. Complications such as diabetic ketoacidosis and hypoglycemia and reduce the long-term complications of diabetes mellitus.</p></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="/static/images/image7.jpg" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Surveillance</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Lifelong monitoring of blood glucose concentrations at least four times a day; periodic developmental evaluations. After age ten years, annual screening for chronic complications of diabetes mellitus including urinalysis for microalbuminuria and ophthalmologic examination for retinopathy.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="/static/images/image10.jpg" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Agents and circumstances to avoid</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">In general, avoid rapid-acting insulin preparations (lispro and aspart) as well as short-acting (regular), insulin preparations (except as a continuous intravenous or subcutaneous infusion) as they may cause severe hypoglycemia in young children.</p></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="/static/images/image8.jpg" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Genetic counseling</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">The mode of inheritance of PNDM is autosomal dominant for mutation of KCNJ11, autosomal dominant or autosomal recessive for mutation of ABCC8 and INS, and autosomal recessive for mutation of GCK and PDX1.</p>
+                                <br>
+                                <p class="text-muted">Individuals with autosomal dominant PNDM may have an affected parent or may have a de novo pathogenic variant.</p>
+                                <p class="text-muted">Each child of an individual with autosomal dominant PNDM has a 50% chance of inheriting the pathogenic variant.</p>
+                                <br>
+                                <p class="text-muted">The parents of a child with autosomal recessive PNDM are obligate heterozygotes and therefore carry one pathogenic variant.</p>
+                                <p class="text-muted">Heterozygotes for pathogenic variants in GCK and PDX1 have a mild form of diabetes mellitus known as GCK-familial monogenic diabetes (formerly known as MODY2)</p>
+                                <p class="text-muted">and PDX1-familial monogenic diabetes (formerly known as MODY4). At conception, each sib of an affected individual has a 25% chance of being affected,</p>
+                                <p class="text-muted">a 50% chance of being an asymptomatic carrier (or of having familial monogenic diabetes), and a 25% chance of being unaffected and not a carrier.</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+        </section>
+        <!-- Footer-->
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-start">Copyright &copy; Your Website 2024</div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
+                        <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'js/scripts.js' %}"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="{% static 'js/sb-forms.js' %}"></script>
+        <script>
+            document.getElementById('logout-link').addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default behavior of clicking on a link
+                
+                // Create a form element
+                var form = document.createElement('form');
+                form.method = 'POST'; // Use the POST method
+                form.action = '/logout/'; // Set the form action to the logout URL
+        
+                // Create a CSRF token input field (required for POST requests)
+                var csrfToken = document.createElement('input');
+                csrfToken.type = 'hidden';
+                csrfToken.name = 'csrfmiddlewaretoken';
+                csrfToken.value = '{{ csrf_token }}'; // Use Django template tag to get the CSRF token value
+        
+                // Append the CSRF token input field to the form
+                form.appendChild(csrfToken);
+        
+                // Append the form to the document body
+                document.body.appendChild(form);
+        
+                // Submit the form
+                form.submit();
+            });
+        </script>
+    </body>
+</html>

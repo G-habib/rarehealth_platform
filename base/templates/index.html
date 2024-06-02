@@ -1,0 +1,589 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title> Rare Diseases Platform </title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="{% static 'js/fontawsome.js'%}" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+        <!-- Include EmailJS library -->
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function () {
+                emailjs.init("d_MIknlSeJsW_qseL");
+            })();
+        </script>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <!-- <a class="navbar-brand" href="/"><img src="{% static 'images/logo4.jpg' %}" alt="..." /></a> -->
+                <a class="navbar-brand" href="/">RH</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#profile" style="color: #ffc914; margin-right: 40px;">Hello, {{request.user}}</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services"> About Us </a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio"> Services </a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="#about">About</a></li> -->
+                        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item">
+                            <a id="logout-link" class="nav-link" href="#" style="color: #ffc914;">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container">
+                <div class="masthead-heading text-uppercase"> Rare, Yet Stronger Together </div>
+                <div class="masthead-subheading"> Helping those facing rare conditions to find the care they need </div>
+                <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
+            </div>
+        </header>
+        <!-- Services-->
+        <section class="page-section" id="services">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase"> About Us </h2>
+                    <h3 class="section-subheading text-muted">RareHealth is not just a website; it's a comprehensive platform designed to empower individuals with rare diseases, offering information, diagnostics, treatment guidance, community support, and easy access to healthcare resources.</h3>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-solid fa-info fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3"> Informations </h4>
+                        <p class="text-muted">RareHealth is your go-to resource for in-depth information on rare diseases. Explore detailed insights into various rare conditions, symptoms, and available research to empower yourself with rare knowledge.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-solid fa-stethoscope fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3"> Diagnostics </h4>
+                        <p class="text-muted">Our innovative diagnostic tool puts the power of early detection in your hands. Simply input your symptoms, and let our advanced model analyze the data to provide potential rare disease matches, helping you navigate your health journey more efficiently.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-solid fa-share-nodes fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3"> Connection </h4>
+                        <p class="text-muted">Join a supportive community on RareHealth where patients share their rare disease stories, connect with others facing similar challenges, and access dedicated support groups. Find and connect with doctors, request appointments, and get your questions answered by healthcare professionals.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Portfolio Grid-->
+        <section class="page-section bg-light" id="portfolio">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Services</h2>
+                    <h3 class="section-subheading text-muted">empower yourself with rare knowledge</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 1-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="{% static 'images/diseases4.jpg' %}" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Diseases</div>
+                                <div class="portfolio-caption-subheading text-muted"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 2-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="{% static 'images/image11.jpg' %}" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Diagnostics</div>
+                                <div class="portfolio-caption-subheading text-muted"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 3-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="{% static 'images/treatments.jpg' %}" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Treatments</div>
+                                <div class="portfolio-caption-subheading text-muted"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                        <!-- Portfolio item 4-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="{% static 'images/connect.jpg' %}" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Patients Space</div>
+                                <div class="portfolio-caption-subheading text-muted"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                        <!-- Portfolio item 5-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="{% static 'images/diagnostic.jpg' %}" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Doctors Space</div>
+                                <div class="portfolio-caption-subheading text-muted"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <!-- Portfolio item 6-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="{% static 'images/locations.jpg' %}" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Find Locations</div>
+                                <div class="portfolio-caption-subheading text-muted"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Team-->
+        <section class="page-section bg-light" id="team">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Our Team</h2>
+                    <h3 class="section-subheading text-muted">get to know us better.</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="{% static 'images/my_photo_2024-03-01_20-49-52.jpg' %}" alt="..." />
+                            <h4>Gassi Mostefa Habib Errahmane</h4>
+                            <p class="text-muted">Master 2 Bioinformatics student</p>
+                            <a class="btn btn-dark btn-social mx-2" href="https://x.com/GM_habib8?t=-AJSomk-M4cP70_5b0wnBQ&s=09" aria-label="Gassi Mostefa Habib Errahmane Twitter Profile"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/profile.php?id=100010833399988&mibextid=gik2fB" aria-label="Gassi Mostefa Habib Errahmane Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/mostafa-gassi-616440238?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" aria-label="Gassi Mostefa Habib Errahmane LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/habib_errahmane?igsh=MWhjMThlOHh1Z2pxNw==" aria-label="Gassi Mostefa Habib Errahmane Instagram Profile"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+             
+                    <div class="col-lg-6">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="{% static 'images/nassimphoto_2024-03-01_20-49-42.jpg' %}" alt="..." />
+                            <h4>Redjem Nassim</h4>
+                            <p class="text-muted">Master 2 Bioinformatics student</p>
+                            <!-- <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Twitter Profile"><i class="fab fa-twitter"></i></a> -->
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/NASSIM.ABT?mibextid=ZbWKwL" aria-label="Redjem Nassim Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                            <!-- <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a> -->
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/_nassim_rjm?igsh=MWp3emRka3RsZm8xeg==" aria-label="Redjem Nassim Instagram Profile"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="{% static 'images/boucheham_photo_2024-03-01_20-50-02.jpg' %}" alt="..." />
+                            <h4>Dr. Anouar Boucheham</h4>
+                            <p class="text-muted">Supervisor Lecturer in Computer Science</p>
+                            <!-- <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Twitter Profile"><i class="fab fa-twitter"></i></a> -->
+                            <!-- <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Facebook Profile"><i class="fab fa-facebook-f"></i></a> -->
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/anouar-boucheham-38039880?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" aria-label="Dr. Anouar Boucheham LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                            <!-- <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Instagram Profile"><i class="fab fa-instagram"></i></a> -->
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="{% static 'images/chehili_photo_2024-03-01_20-48-47.jpg' %}" alt="..." />
+                            <h4>Dr. Hamza Chehili</h4>
+                            <p class="text-muted">Co-Supervisor Lecturer in Computer Science</p>
+                            <!-- <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Twitter Profile"><i class="fab fa-twitter"></i></a> -->
+                            <!-- <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Facebook Profile"><i class="fab fa-facebook-f"></i></a> -->
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/hamza-chehili-93a1b453?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" aria-label="Dr. Hamza Chehili LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                            <!-- <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Instagram Profile"><i class="fab fa-instagram"></i></a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Meet the RareHealth Team, a dynamic group of Master's students in bioinformatics from Constantine 1 Frères Mentouri University. Passionate about merging cutting-edge technology with healthcare, we bring a blend of academic expertise and a shared commitment to making a difference.
+                        Guided by our esteemed supervisors, Dr. Anouar Boucheham, Lecturer in Computer Science at Constantine 3 University, and Dr. Hamza Chehili, Lecturer in Computer Science at Constantine 1 Frères Mentouri University, we leverage their expertise and mentorship to drive innovation and excellence. We aspire to make a lasting impact in the world of healthcare and empower individuals facing rare conditions.
+                        Welcome to our journey at the intersection of bioinformatics and compassionate care. Our collective pursuit is to revolutionize the understanding and management of rare diseases through the RareHealth platform.</p></div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact-->
+        <section class="page-section" id="contact">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Contact Us</h2>
+                </div>
+                <form id="contactForm">
+                    <div class="row align-items-stretch mb-5">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input class="form-control" id="name" type="text" placeholder="Your Name *" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" id="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" />
+                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                            </div>
+                            <div class="form-group mb-md-0">
+                                <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group form-group-textarea mb-md-0">
+                                <textarea class="form-control" id="message" placeholder="Your Message *" data-sb-validations="required"></textarea>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-none" id="submitSuccessMessage">
+                        <div class="text-center text-white mb-3">
+                            <div class="fw-bolder">Form submission successful!</div>
+                            We will get back to you soon.
+                            <br />
+                            <!-- <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a> -->
+                        </div>
+                    </div>
+                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase" id="submitButton" type="submit">Send Message</button></div>
+                </form>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-start">Copyright &copy; Your Website 2024</div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
+                        <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Portfolio Modals-->
+        <!-- Portfolio item 1 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="{% static 'images/icons/close-icon.svg' %}" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Diseases</h2>
+                                    <br>
+                                    <img class="img-fluid d-block mx-auto" src="{% static 'images/diseases4.jpg' %}" alt="..." />
+                                    <p>Explore detailed insights into various rare conditions, informations, symptoms, and available research</p>
+                                    <!-- <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"> -->
+                                    <button class="btn btn-primary btn-xl text-uppercase" onclick="window.location.href='/diseases'" type="button">
+                                        Start Exploring
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 2 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="{% static 'images/icons/close-icon.svg' %}" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Diagnostics</h2>
+                                    <p>Find out if you have the PNDM diseases?</p>
+                                    <br>
+                                    <img class="img-fluid d-block mx-auto" src="{% static 'images/image11.jpg' %}" alt="..." />
+                                    <p>Simply input your informations and symptoms, and let our advanced model analyze the data to provide results</p>
+                                    <p class="lead mb-4">Please fill out the form below :</p>
+                                    <!-- a form so that the patient enters his data -->
+                                    <hr>
+                                    <form action="result" method="post" class="form">
+                                        {% csrf_token %}
+                                        <div class="form-group row">
+                                            <label for="age" class="col-sm-4 col-form-label symptom-label" title="Patient age (years)">Age : </label>
+                                            <div class="col-sm-8">
+                                                <input type="number" name="age" id="age" class="form-control" step="any" min="1" max="11" placeholder="put the age between (1-11 years)" required>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="form-group row">
+                                            <label for="HbA1c" class="col-sm-4 col-form-label symptom-label" title="Glycated hemoglobin (Average blood glucose levels over the past two to three months)">HbA1c : </label>
+                                            <div class="col-sm-8">
+                                                <input type="number" name="HbA1c" id="HbA1c" class="form-control" step="any" min="4" max="9" placeholder="HbA1c (DCCT unit), put a value between (4-9 %)" required>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="form-group row">
+                                            <label for="Birth_Weight" class="col-sm-4 col-form-label symptom-label" title="Patient birth weight (Kg)">Birth Weight : </label>
+                                            <div class="col-sm-8">
+                                                <input type="number" name="Birth_Weight" id="Birth_Weight" class="form-control" step="any" min="0.5" max="6" placeholder="put the Birth weight between (0.5-6 Kg)" required>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="form-group row">
+                                            <label for="Insulin_level" class="col-sm-4 col-form-label symptom-label" title="iU/ml">Insulin level : </label>
+                                            <div class="col-sm-8">
+                                                <input type="number" name="Insulin_level" id="Insulin_level" class="form-control" step="any" min="2" max="20" placeholder="put the Insulin level between (2-20 iU/ml)" required>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="form-group row">
+                                            <label for="Family_History" class="col-sm-4 col-form-label symptom-label" title="Does the patient have a family member with PNDM">Family History : </label>
+                                            <div class="col-sm-8">
+                                                <select name="Family_History" id="Family_History" class="form-control" required>
+                                                    <option value="0">No</option>
+                                                    <option value="1">Yes</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="form-group row">
+                                            <label for="Developmental_Delay" class="col-sm-4 col-form-label symptom-label" title="Does the patient have slow growth and failure to thrive">Developmental Delay : </label>
+                                            <div class="col-sm-8">
+                                                <select name="Developmental_Delay" id="Developmental_Delay" class="form-control" required>
+                                                    <option value="0">No</option>
+                                                    <option value="1">Yes</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <div class="form-container">
+                                            <div class="form-group row">
+                                                <div class="col-sm-8 offset-sm-4 text-center">
+                                                    <button type="submit" class="btn btn-warning btn-lg btn-block">Diagnose</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>                                                                                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 3 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="{% static 'images/icons/close-icon.svg' %}" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Treatments</h2>
+                                    <br>
+                                    <img class="img-fluid d-block mx-auto" src="{% static 'images/treatments.jpg' %}" alt="..." />
+                                    <p>Treatment suggestions. RareHealth guides you with recommended courses of action, empowering you to make informed decisions about your healthcare.</p>
+                                    <button class="btn btn-primary btn-xl text-uppercase" onclick="window.location.href='/treatment'" type="button">
+                                        Treatment
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 4 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="{% static 'images/icons/close-icon.svg' %}" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Patients Space</h2>
+                                    <p>Join a supportive community on RareHealth</p>
+                                    <br>
+                                    <img class="img-fluid d-block mx-auto" src="{% static 'images/connect.jpg' %}" alt="..." />
+                                    <p>Patients Space! Where patients share their rare disease, Find and connect with Doctors, request Appointments, and get Questions answered by healthcare professionals.</p>
+                                    <button class="btn btn-primary btn-xl text-uppercase" onclick="window.location.href='/patients'" type="button">
+                                        Enter Space
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 5 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="{% static 'images/icons/close-icon.svg' %}" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Doctors Space</h2>
+                                    <p>Join a professional community on RareHealth</p>
+                                    <br>
+                                    <img class="img-fluid d-block mx-auto" src="{% static 'images/diagnostic.jpg' %}" alt="..." />
+                                    <p>Doctors Space! Where doctors share their informations about rare disease, see Appointments schedule, connect with patients and other doctors, and get patients questions answered.</p>
+                                    <button class="btn btn-primary btn-xl text-uppercase" onclick="window.location.href='/doctors'" type="button">
+                                        Enter Space
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 6 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="{% static 'images/icons/close-icon.svg' %}" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Find Locations</h2>
+                                    <br>
+                                    <img class="img-fluid d-block mx-auto" src="{% static 'images/locations.jpg' %}" alt="..." />
+                                    <p>Need to find a Doctor, a hospital or clinic specializing in rare diseases? RareHealth provides a convenient locator to help you easily identify healthcare facilities near you, ensuring you have access to the care you need.</p>
+                                    <button class="btn btn-primary btn-xl text-uppercase" onclick="window.location.href='/location'" type="button">
+                                        Search
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'js/scripts.js' %}"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="{% static 'js/sb-forms.js' %}"></script>
+        <script>
+            document.getElementById('logout-link').addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default behavior of clicking on a link
+                
+                // Create a form element
+                var form = document.createElement('form');
+                form.method = 'POST'; // Use the POST method
+                form.action = '/logout/'; // Set the form action to the logout URL
+        
+                // Create a CSRF token input field (required for POST requests)
+                var csrfToken = document.createElement('input');
+                csrfToken.type = 'hidden';
+                csrfToken.name = 'csrfmiddlewaretoken';
+                csrfToken.value = '{{ csrf_token }}'; // Use Django template tag to get the CSRF token value
+        
+                // Append the CSRF token input field to the form
+                form.appendChild(csrfToken);
+        
+                // Append the form to the document body
+                document.body.appendChild(form);
+        
+                // Submit the form
+                form.submit();
+            });
+        </script>
+        <script type="text/javascript">
+            document.getElementById('contactForm').addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                // Get form values
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
+                const message = document.getElementById('message').value;
+
+                // Send email using EmailJS
+                emailjs.send('service_4564okg', 'template_vdmrogh', {
+                    from_name: name,
+                    from_email: email,
+                    phone: phone,
+                    message: message
+                }).then(function (response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    document.getElementById('submitSuccessMessage').classList.remove('d-none');
+                    document.getElementById('submitErrorMessage').classList.add('d-none');
+                }, function (error) {
+                    console.log('FAILED...', error);
+                    document.getElementById('submitSuccessMessage').classList.add('d-none');
+                    document.getElementById('submitErrorMessage').classList.remove('d-none');
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title> Rare Diseases Platform </title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="{% static 'js/fontawsome.js'%}" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/sec_styles.css' %}" rel="stylesheet" />
+</head>
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="/">RH</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#profile" style="color: #ffc914; margin-right: 40px;">{{ request.user }} Profile</a></li>
+                    <li class="nav-item">
+                        <a id="logout-link" class="nav-link" href="#" style="color: #ffc914;">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <section>
+        <div class="text-center">
+            <h1>Send a new Message</h1>
+        </div>
+        <div class="container">
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="recipient">Select Doctor:</label>
+                    <select name="recipient" id="recipient" class="form-control">
+                        {% for doctor in doctors %}
+                            <option value="{{ doctor.user.id }}">{{ doctor.first_name }} {{ doctor.last_name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="content">Message:</label>
+                    <textarea name="content" id="content" class="form-control" required></textarea>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+            <br>
+            <br>
+            <br>
+            <div class="text-center">
+                <h1>Messages History</h1>
+            </div>
+            <ul class="list-group">
+                {% for message in sent_messages %}
+                    <li class="list-group-item"><h6>To Doctor {{ message.recipient_name }} :</h6> {{ message.content }} <small class="text-muted">({{ message.timestamp }})</small></li>
+                {% endfor %}
+            </ul>
+            <br>
+            <br>
+            <br>
+            <div class="text-center">
+                <h1>Received Messages</h1>
+            </div>
+            <ul class="list-group">
+                {% for message in received_messages %}
+                    <li class="list-group-item"><h6>From Doctor {{ message.sender_name }} :</h6> {{ message.content }} <small class="text-muted">({{ message.timestamp }})</small></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+    <br>
+    <br>
+    <!-- Footer-->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-lg-start">Copyright &copy; Your Website 2024</div>
+                <div class="col-lg-4 my-3 my-lg-0">
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
+                    <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- Core theme JS-->
+    <script src="{% static 'js/scripts.js' %}"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="{% static 'js/sb-forms.js' %}"></script>
+    <script>
+        document.getElementById('logout-link').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default behavior of clicking on a link
+            
+            // Create a form element
+            var form = document.createElement('form');
+            form.method = 'POST'; // Use the POST method
+            form.action = '/logout/'; // Set the form action to the logout URL
+
+            // Create a CSRF token input field (required for POST requests)
+            var csrfToken = document.createElement('input');
+            csrfToken.type = 'hidden';
+            csrfToken.name = 'csrfmiddlewaretoken';
+            csrfToken.value = '{{ csrf_token }}'; // Use Django template tag to get the CSRF token value
+
+            // Append the CSRF token input field to the form
+            form.appendChild(csrfToken);
+
+            // Append the form to the document body
+            document.body.appendChild(form);
+
+            // Submit the form
+            form.submit();
+        });
+    </script>
+</body>
+</html>

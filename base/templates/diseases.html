@@ -1,0 +1,167 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title> Rare Diseases Platform </title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="{% static 'js/fontawsome.js'%}" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+        <link href="{% static 'css/sec_styles.css' %}" rel="stylesheet" />
+        
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="/">RH</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#profile" style="color: #ffc914; margin-right: 40px;">{{request.user}} Profile</a></li>
+                        <li class="nav-item">
+                            <a id="logout-link" class="nav-link" href="#" style="color: #ffc914;">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- ////////////////////////////////////////////// -->
+        <br>
+        <br>
+        <section class="page-section" id="about">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Permanent Neonatal Diabetes Mellitus (PNDM)</h2>
+                    <h3 class="section-subheading text-muted">Other Names: Isolated PNDM; Monogenic diabetes of infancy.</h3>
+                </div>
+                <ul class="timeline">
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="/static/images/image6.jpg" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Summary</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Permanent neonatal diabetes mellitus (PNDM) is a rare condition occurring in 1 infant every 300,000 – 400,000 live births. It is a type of diabetes that appears within the first 6 months of life and persists throughout life. Affected individuals have slow growth before birth followed by hyperglycemia, dehydration and failure to thrive in infancy Some individuals also have neurological problems including developmental delay and epilepsy.</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="/static/images/icon3.jpg" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Population Estimate</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Fewer than 5,000 people in the U.S. have this disease.</p></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="/static/images/image4.jpg" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Symptoms</h4>
+                                <h4 class="subheading">May start to appear during Pregnancy, at Birth, as an Infant, and persists throughout life.</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">1. Failure to thrive : Failure to thrive (FTT) refers to a child whose physical growth is substantially below the norm.</p>
+                                <p class="text-muted">2. Hypovolemia : An decrease in the amount of intravascular fluid, particularly in the volume of the circulating blood.</p>
+                                <p class="text-muted">3. Reduced pancreatic beta cells : Reduced number of beta cells in the pancreatic islets of Langerhans.</p>
+                                <p class="text-muted">4. Weight loss : Reduction of total body weight.</p>
+                                <p class="text-muted">5. Global developmental delay : A delay in the achievement of motor or mental milestones in the domains of development of a child, including motor skills, speech and language, cognitive skills, and social and emotional skills. This term should only be used to describe children younger than five years of age.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="/static/images/image3.jpg" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Cause</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">This disease is caused by a change in the genetic material (DNA). Mutations in 10 genes have been associated with PNDM: KCNJ11 (34% of cases), ABCC8 (24%), INS (13%), GCK (4%), PDX1 (<1%), GATA6, PTF1A, HNF1B, RFX6 and MNX1. These last five genes may be associated with syndromic forms.The genetic defects result in partial or complete insulin deficiency, and for the last six in possible pancreatic hypoplasia.Inheritance: Autosomal dominant, Autosomal recessive</p></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="/static/images/icon2.jpg" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Categories</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Genetic Diseases, Endocrine Diseases</p></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="text-center">
+                <button class="btn btn-primary btn-xl text-uppercase" onclick="window.location.href='/treatment'" type="button">
+                    Treatment
+                </button>
+            </div>
+            <br>
+        </section>
+        <!-- Footer-->
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-start">Copyright &copy; Your Website 2024</div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
+                        <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'js/scripts.js' %}"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="{% static 'js/sb-forms.js' %}"></script>
+        <script>
+            document.getElementById('logout-link').addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default behavior of clicking on a link
+                
+                // Create a form element
+                var form = document.createElement('form');
+                form.method = 'POST'; // Use the POST method
+                form.action = '/logout/'; // Set the form action to the logout URL
+        
+                // Create a CSRF token input field (required for POST requests)
+                var csrfToken = document.createElement('input');
+                csrfToken.type = 'hidden';
+                csrfToken.name = 'csrfmiddlewaretoken';
+                csrfToken.value = '{{ csrf_token }}'; // Use Django template tag to get the CSRF token value
+        
+                // Append the CSRF token input field to the form
+                form.appendChild(csrfToken);
+        
+                // Append the form to the document body
+                document.body.appendChild(form);
+        
+                // Submit the form
+                form.submit();
+            });
+        </script>
+    </body>
+</html>
