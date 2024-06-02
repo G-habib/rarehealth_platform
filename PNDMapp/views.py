@@ -2,11 +2,12 @@ import os
 os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
+from django.conf import settings
 from tensorflow import keras
 from keras.models import load_model
 from base.models import Prediction, Patient
 import joblib
-model_path = r'C:\Users\HP 2018\Desktop\New folder (2)\hb\proj\savedModels\PNDM_disease_DL_prediction_v2.h5'
+model_path = os.path.join(settings.BASE_DIR, 'savedModels', 'PNDM_disease_DL_prediction_v2.h5')
 model = load_model(model_path)
 
 # Create your views here.
@@ -48,7 +49,7 @@ def formInfo(request):
     print(input_data_np)
 
     # Load the scaler
-    scaler_path = r'C:\Users\HP 2018\Desktop\New folder (2)\hb\proj\savedModels\scaler.pkl'
+    scaler_path = os.path.join(settings.BASE_DIR, 'savedModels', 'scaler.pkl')
     scaler = joblib.load(scaler_path)
     scaler.feature_names_in_ = None
     input_data_std = scaler.transform(input_data_np)
