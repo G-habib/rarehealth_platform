@@ -1,0 +1,303 @@
+/* Global styles */
+.page-section2 {
+    /* background-color: #f4f4f4;*/ /* Set background color */
+    background-color: #fff;
+}
+/* //////////////////////////////////////////////////////////////////////////////////////////// */
+.result-section {
+    text-align: center;
+}
+
+.prediction-result h2 {
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 40px; /* Adjust size as needed */
+    font-weight: bold;
+}
+
+.result-text {
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 28px; /* Adjust size as needed */
+    font-weight: bold;
+    color: #2ecc71;
+}
+
+.result-image {
+    margin-top: 10px; /* Adjust spacing as needed */
+}
+
+.img9 {
+    width: 550px; /* Adjust size as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.disease-info {
+    text-align: center;
+}
+
+.info-image {
+    background-image: url("/static/images/image6.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center center;
+    padding: 50px; /* Adjust padding as needed */
+    color: white;
+}
+
+.pndm-title h2 {
+    /* font-family: 'Roboto', sans-serif; */ 
+    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 50px; /* Adjust size as needed */
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+
+.about-disease {
+    margin-top: 20px; /* Adjust spacing as needed */
+}
+
+.about-disease h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px; /* Adjust size as needed */
+    font-weight: bold;
+    color: gold; /* Change color as needed */
+}
+
+.about-disease p {
+    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 28px; /* Adjust size as needed */
+    color: black; /* Change color as needed */
+}
+.disease-info {
+    /* Your existing styles for the .summary container */
+    margin-bottom: 50px; /* Adjust the value as needed for the desired spacing */
+}
+
+.summary {
+    display: flex;
+    align-items: center;
+}
+
+.summary-image {
+    flex: 1;
+    margin-right: 40px; /* Adjust spacing as needed */
+}
+
+.summary-image img {
+    max-width: 600px; /* Adjust size as needed */
+    height: auto;
+}
+
+.summary-content {
+    flex: 5;
+}
+
+.summary-title {
+    text-align: center;
+}
+
+.summary-title h3 {
+    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 30px; /* Adjust size as needed */
+    font-weight: bold;
+    color: black; /* Change color as needed */
+}
+
+.summary-text {
+    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 18px; /* Adjust size as needed */
+    color: black; /* Change color as needed */
+}
+.summary {
+    /* Your existing styles for the .summary container */
+    margin-bottom: 100px; /* Adjust the value as needed for the desired spacing */
+}
+
+.Population-Estimate {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+}
+
+.pop-icon {
+    margin-right: 10px; /* Adjust the margin as needed */
+    margin-left: 160px;
+}
+
+.pop-icon img {
+    border-radius: 50%; /* Make the image circular */
+    width: 50px; /* Set the width of the icon */
+    height: 50px; /* Set the height of the icon */
+}
+
+.pop-title {
+    font-size: 1.2em; /* Adjust the font size of the title */
+}
+
+.pop-text {
+    margin-top: 10px; /* Add margin to separate the text from the title */
+}
+
+.pop-title h3 {
+    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    /* font-size: 24px; */ /* Adjust size as needed */
+    font-weight: bold;
+    color: black; /* Change color as needed */
+}
+
+.pop-text {
+    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 24px; /* Adjust size as needed */
+    color: black; /* Change color as needed */
+}
+.Population-Estimate, .Categories2 {
+    /* Your existing styles for the .summary container */
+    margin-bottom: 150px; /* Adjust the value as needed for the desired spacing */
+}
+
+.symptoms-title {
+    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 30px; /* Adjust size as needed */
+    font-weight: bold;
+    color: black; /* Change color as needed */
+    text-align: center;
+}
+.symptoms-text {
+    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 24px; /* Adjust size as needed */
+    color: black; /* Change color as needed */
+    text-align: center;
+}
+.symptoms {
+    /* Your existing styles for the .summary container */
+    margin-bottom: 200px; /* Adjust the value as needed for the desired spacing */
+}
+
+.symptoms-types {
+    display: flex;
+    align-items: center;
+}
+
+.symptoms-image {
+    flex: 1;
+    margin-right: 40px; /* Adjust spacing as needed */
+}
+
+.symptoms-image img {
+    max-width: 600px; /* Adjust size as needed */
+    height: auto;
+}
+
+.symptoms-types-content {
+    flex: 5;
+}
+
+.st-title {
+    text-align: center;
+}
+
+.st-title h3 {
+    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 30px; /* Adjust size as needed */
+    font-weight: bold;
+    color: black; /* Change color as needed */
+}
+
+.st-text {
+    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 18px; /* Adjust size as needed */
+    color: black; /* Change color as needed */
+}
+.symptoms-types {
+    /* Your existing styles for the .summary container */
+    margin-bottom: 200px; /* Adjust the value as needed for the desired spacing */
+}
+
+.Cause, .Treatment, .complications, .Surveillance, .Agents-circumstances, .Genetic-counseling {
+    display: flex;
+    align-items: center;
+}
+
+.cause-image, .treatment-image, .complications-image, .Surveillance-image, .Agents-circumstances-image, .Genetic-counseling-image {
+    flex: 1;
+    margin-right: 40px; /* Adjust spacing as needed */
+}
+
+.cause-image img, .treatment-image img, .complications-image img, .Surveillance-image img, .Agents-circumstances-image img, .Genetic-counseling-image img {
+    max-width: 600px; /* Adjust size as needed */
+    height: auto;
+}
+
+.cause-content, .Management-content, .complications-content, .Surveillance-content, .Agents-circumstances-content, .Genetic-counseling-content {
+    flex: 5;
+}
+
+.cause-title, .Management, .treatment-title, .complications-title, .Surveillance-title, .Agents-circumstances-title, .Genetic-counseling-title, .Categories-title {
+    text-align: center;
+}
+
+.cause-title h3, .Management, .treatment-title, .complications-title, .Surveillance-title, .Agents-circumstances-title, .Genetic-counseling-title, .Categories-title {
+    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 50px; /* Adjust size as needed */
+    font-weight: bold;
+    color: black; /* Change color as needed */
+}
+
+.cause-text, .treatment-text, .complications-text, .Surveillance-text, .Agents-circumstances-text, .Genetic-counseling-text {
+    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 18px; /* Adjust size as needed */
+    color: black; /* Change color as needed */
+}
+.Cause, .Treatment, .complications, .Surveillance, .Agents-circumstances, .Genetic-counseling, .Categories-title, .Management, .Genetic-counseling-title {
+    /* Your existing styles for the .summary container */
+    margin-bottom: 100px; /* Adjust the value as needed for the desired spacing */
+}
+
+.Categories, .Categories2 {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.Categories-icon1,
+.Categories-icon2 {
+    margin-bottom: 10px; /* Add some space between the icons and paragraphs */
+    width: 100px; /* Adjust size of icons */
+    height: 100px; /* Adjust size of icons */
+    border-radius: 50%; /* Make icons circular */
+    overflow: hidden; /* Hide overflow */
+}
+
+.Categories-icon1 img,
+.Categories-icon2 img {
+    width: 100%; /* Make sure the image fills the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.genetic-text,
+.Endocrine-text {
+    text-align: center; /* Center text */
+    max-width: 80px; /* Limit width of text */
+    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 18px; /* Adjust size as needed */
+    color: black; /* Change color as needed */
+    font-weight: bold;
+}
+
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////////// */
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .PNDM-result {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .img6 {
+        margin-bottom: 20px; /* Reduce bottom margin for smaller screens */
+    }
+}
